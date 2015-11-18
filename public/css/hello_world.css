@@ -1,6 +1,10 @@
 		body {
 			font-family: Tahoma, Helvetica, Sans-Serif;
 			font-size: 18px;
+			background-image: url("/img/capesanblas.jpeg");
+			background-repeat: no-repeat;
+			background-position: right top;
+			margin-right: 200px;
 		}
 		h1 {
 		color: blue;
