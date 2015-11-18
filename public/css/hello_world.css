@@ -1,0 +1,19 @@
+		body {
+			font-family: Tahoma, Helvetica, Sans-Serif;
+			font-size: 18px;
+		}
+		h1 {
+		color: blue;
+		text-decoration: underline;		
+		text-align: center;
+	}
+		h2 {
+		color: aqua;
+		text-decoration: underline;	
+	}
+		body {
+		background-color: silver;	
+	}
+		#fav-quote {
+			font-style: italic;
+		}
