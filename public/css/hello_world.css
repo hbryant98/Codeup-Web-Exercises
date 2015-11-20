@@ -1,10 +1,11 @@
 		body {
+			background-color: silver;
 			font-family: Tahoma, Helvetica, Sans-Serif;
 			font-size: 18px;
 			background-image: url("/img/capesanblas.jpeg");
 			background-repeat: no-repeat;
-			background-position: right top;
-			margin-right: 200px;
+			background-size: cover;
+			/*background-position: */
 		}
 		h1 {
 		color: blue;
@@ -14,9 +15,6 @@
 		h2 {
 		color: aqua;
 		text-decoration: underline;	
-	}
-		body {
-		background-color: silver;	
 	}
 		#fav-quote {
 			font-style: italic;
