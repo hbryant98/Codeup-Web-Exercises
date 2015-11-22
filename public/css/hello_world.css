@@ -1,21 +1,93 @@
-		body {
-			background-color: silver;
-			font-family: Tahoma, Helvetica, Sans-Serif;
-			font-size: 18px;
-			background-image: url("/img/capesanblas.jpeg");
-			background-repeat: no-repeat;
-			background-size: cover;
-			/*background-position: */
-		}
-		h1 {
-		color: blue;
-		text-decoration: underline;		
-		text-align: center;
-	}
-		h2 {
-		color: aqua;
-		text-decoration: underline;	
-	}
-		#fav-quote {
-			font-style: italic;
-		}
+/*This is the style for the hello_world.html*/
+
+body {
+	background-color: silver;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 18px;
+	background-image: url("/img/capesanblas.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+h1 {
+	color: blue;
+	text-decoration: underline;		
+	text-align: center;
+}
+h2 {
+	color: aqua;
+	text-decoration: underline;	
+}
+
+
+
+ol, ul, .top5 {
+	color: #00BFFF;
+	list-style-type: square;
+}
+
+
+table {
+	width: 500px;
+	padding: 10px;
+	border: 1px solid black;
+	margin: 10px 0;
+	background-color: #F5F5DC;
+	font-family: Georgia, serif;
+	/*font-size: 15px;*/
+	font-weight: bold;
+	color: black;
+}
+th {
+	padding: 1px;
+	text-transform: uppercase;
+	text-align: center;
+}
+tr>td {
+	text-align: center;
+	border: 1px dotted red;
+}
+img {
+	width: 300px;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.float{
+	width: 250px;
+	padding: 5px;
+	margin: 10px;
+	/*float:left;*/
+	float: right;
+	position: relative;
+	right: 10px;
+}
+.basicinfo{
+	width: 1000px;
+	padding: 5px;
+	margin: 10px 20px;
+	font-family: Tahoma, Geneva, Sans-Serif; 
+	color: aqua;
+}
+#fav-quote {
+	font-style: italic;
+	margin-left: 30px;
+}
+
+
+a:link {
+	color: #00BFFF;
+}
+a:visited {
+	color: black;
+}
+a:hover {
+	color: blue;
+}	
+/*a:active { 
+	color: green;
+}*/
+
+
