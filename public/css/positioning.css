@@ -1,0 +1,65 @@
+/*This is the style for the css_positioning.html*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1 {
+	text-decoration: underline;
+	color: purple;
+	margin-bottom: 50px;
+}
+img {
+	float:right;
+	border: 5px solid black;
+}
+.box {
+	width: 72px;
+	height: 72px; 
+	padding: 10px;
+	border: 1px solid black;
+	margin: 50px;
+	font-family: wavelength;
+	font-weight: bold;
+	color: white;
+	float: left;
+	position: relative;
+}
+.parent1 {
+	width: 600px;
+	height: 50px;
+}
+.arrow {
+	position: absolute;
+	top:;
+}
+
+#red {
+	background-color: red;
+	/*float: left;*/
+	/*position: absolute;*/
+
+}
+#orange {
+	background-color: orange;
+	/*float: left;*/	
+}
+#ylw {
+	background-color: yellow;
+	/*float: left;*/	
+}
+#grn {
+	background-color: green;
+	/*float: left;*/	
+}
+#blue {
+	background-color: blue;
+	/*float: left;*/
+}
+#violet {
+	background-color: #EE82EE;
+	/*float: left;*/
+}
