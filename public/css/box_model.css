@@ -1,11 +1,19 @@
 /*This is the style for the css_box_model.html*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 h1 {
 	text-decoration: underline;
 	color: purple;
 }
 .box {
-	width: 150px;
-	height: 50px;
+	width: 172px; /*150 without border box*/
+	height: 72px; /* 50 without border box*/
 	padding: 10px;
 	border: 1px solid black;
 	margin: 10px 0;
