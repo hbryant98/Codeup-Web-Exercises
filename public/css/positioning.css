@@ -20,6 +20,10 @@ div:nth-of-type(3) {
 div:nth-of-type(5) {
   clear: left;
 }
+i {
+	color: black;
+	/*font-size: 20px;*/
+}
 
 .box {
 	width: 75px;
@@ -28,7 +32,8 @@ div:nth-of-type(5) {
 	border: 1px solid black;
 	/*margin: 50px;*/
 	margin: 50px 50px 50px 0px;
-	font-family: wavelength;
+	font-family: Alegreya, serif;
+	font-size: 15px;
 	font-weight: bold;
 	color: white;
 	float: left;
