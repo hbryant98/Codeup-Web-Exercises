@@ -1,5 +1,18 @@
 /*This is the style for the flag_challenge.html*/
+/**CONTENTS
+*
+*S
+*HEADER............Styles for header and main heading
+FLAGS....Styles for different flags
+*American Flag
+*Japanese Flag
+*Norwegian Flag
+*British Flag
+**/
 
+/*-----------------------------------------*\
+			Header
+\*-----------------------------------------*/
 html {
     /*box-sizing: border-box;*/
     background-color: gray;
@@ -13,7 +26,9 @@ h1 {
 	text-decoration: underline;
 }
 
-/*----------- American Flag ---------------*/
+/*-----------------------------------------*\
+			American Flag
+\*-----------------------------------------*/	
 
 .american {
 	width: 500px;
@@ -23,6 +38,7 @@ h1 {
 	margin: 20px 20px 5px 20px;
 	position: relative;
 }
+/*This is the styling for the stripes*/
 
 .stripe {
 	width: 500px;
@@ -34,6 +50,7 @@ h1 {
 	top: 0px;
 	left: 0px;
 }
+/*This is the styling for the blue box*/
 .bluebox {
 	width: 200px;
 	height: 161.7px; 
@@ -54,8 +71,9 @@ h1 {
 	color: #ffffff;
 }
 	
-/*----------- Japanese Flag ---------------*/	
-
+/*-----------------------------------------*\
+			Japanese Flag
+\*-----------------------------------------*/		
 
 .japan {
 	width: 480px;
@@ -75,9 +93,9 @@ h1 {
 	left: 135px;
 }
 
-
-/*----------- Norwegian Flag ---------------*/
-
+/*-----------------------------------------*\
+			Norwegian Flag
+\*-----------------------------------------*/
 
 .norway {
 	width: 460px;
@@ -87,38 +105,117 @@ h1 {
 	margin: 0px 20px 10px 40px;
 	position: relative;
 }
+/*This is the styling for the four rectangular boxes: each box has different
+*borders and positioning
+*/
+
 .rectangle {
 	background-color: red;
 	border: solid white;
+	height: 120px;
 	position: absolute;	
 }
 
 #toplft {
 	border-width: 0px 15px 15px 0px;
-	height: 120px;
 	width: 105px;
 	top: 0px;
 	left: 0px;
 }
 #toprt {
 	border-width: 0px 0px 15px 15px;
-	height: 120px;
 	width: 290px;
 	top: 0px;
 	left: 155px;
 }
 #bottomlft {
 	border-width: 15px 15px 0px 0px;
-	height: 120px;
 	width: 105px;
 	top: 165px;
 	left: 0px;
 }
 #bottomrt {
 	border-width: 15px 0px 0px 15px;
-	height: 120px;
 	width: 290px;
 	top: 165px;
 	left: 155px;
 }
 
+/*-----------------------------------------*\
+			British Flag
+\*-----------------------------------------*/
+
+.britain {
+	height: 270px;
+	width: 480px;
+	background-color: red;
+	border: 1px solid black;
+	margin: 0px 20px 10px 30px;
+	position: relative;
+}
+/*This is the styling for the four rectangular boxes; each box
+* has differnt borders and positioning
+*/
+
+.rectangle2 {
+	background-color: navy;
+	border: solid white;
+	height: 100px;
+	width: 205px;
+	position: absolute;
+	overflow: hidden;
+}
+#annexlft {
+	border-width: 0px 15px 15px 0px;
+	top: 0px;
+	left: 0px;
+}
+#annexrt {
+	border-width: 0px 0px 15px 15px;
+	top: 0px;
+	left: 260px;
+}
+#baselft {
+	border-width: 15px 15px 0px 0px;
+	top: 155px;
+	left: 0px;
+}
+#basert {
+	border-width: 15px 0px 0px 15px;
+	top: 155px;
+	left: 260px;
+}
+/*This is the styling for the diagonal lines in each box: each diagonal line
+* has different borders and positioning*/
+
+.diagonal-line {
+	height: 10px;
+	width: 235px;
+	background-color: red;
+	border: solid white;
+	position: absolute;
+}
+#toplftdiag {
+	border-width: 20px 0px 10px 0px;
+	top: 36px;
+	left: -20px;
+	transform: rotate(28deg);
+}
+#toprtdiag {
+	border-width: 10px 0px 20px 0px;
+	top: 38px;
+	left: -15px;
+	transform: rotate(-30deg);
+}
+#bottomlftdiag {
+	border-width: 20px 0px 10px 0px;
+	top: 22px;
+	left: -15px;
+	transform: rotate(-30deg);
+}
+#bottomrtdiag {
+	border-width: 10px 0px 20px 0px;
+	top: 26px;
+	left: -16px;
+	transform: rotate(27deg);
+}
