@@ -1,16 +1,39 @@
-/*This is the style for the css_box_model.html*/
+/**This is the style for the css_box_model.html
+*CONTENTS
+*
+*SETTINGS
+*Global............Global styles and config
+*
+*GENERIC
+*Normalize.css.....A level playing field
+*Box-sizing........Better default box-sizing
+*HEADER............
+DIV BOX STYLING....Styles for div boxes
+*/
 
+/*----------------------------------------*\
+	BOX SIZING
+\*----------------------------------------*/
 html {
     box-sizing: border-box;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
+/*----------------------------------------*\
+	HEADER
+\*----------------------------------------*/
 h1 {
 	text-decoration: underline;
 	color: purple;
 }
+/*----------------------------------------*\
+	DIV BOX STYLING
+\*----------------------------------------*/
+
+
+/*** Settings which apply to all boxes***/
+
 .box {
 	width: 172px; /*150 without border box*/
 	height: 72px; /* 50 without border box*/
@@ -21,6 +44,9 @@ h1 {
 	font-weight: bold;
 	color: white;
 }
+
+/*** Settings which are unique to each box***/
+
 #red {
 	background-color: red;
 }
