@@ -1,0 +1,131 @@
+/*This is the style for the layouts.html*/
+/*CONTENTS
+*
+*SETTINGS
+*Global............Global styles and config
+*
+*Side Bar........styles for side navigation bar
+*Nav Bar.........styles for navigation bar
+*Main Content....styles for image and page text
+*Footer..........styles for footer
+**/
+
+/*------------------- Global -----------------------*/
+body {
+	background-color: #e1e1e1;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+nav, footer {
+	background-color: white;
+	font-weight: 500;
+	margin: 0;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	/*border: solid red 5px;*/
+}
+aside {
+	position: absolute;
+	left: 0;
+	height: 450px;
+	width: 15%;
+	margin-right: 10px;
+	margin-top: 72px;
+	padding: 20px;
+	background-color: yellow;
+	border-radius: 3px;
+	text-align: left;
+	font-size: 25px;
+	/*border: solid orange 5px;*/
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+}
+
+/*------------------- Side Bar -----------------------*/
+.sidebar {
+	color: blue;
+	padding: 15px;
+}
+.sidebar>li {
+	margin: 15px;
+	color: blue;
+}
+
+/*--------------------- Nav Bar ----------------------*/
+.nav-links {
+	position: relative;
+	text-align: left;
+	width: 750px;
+	margin: 20px auto;
+	/*border: solid green 5px;*/
+}
+
+.nav-item {
+	text-align: center;
+	display: inline-block;
+	font-size: 25px;
+}
+#darthvader, 
+#bobafett, 
+#tiefighter,
+#starfighter {
+	color: blue;
+	text-decoration: none;
+	padding: 10px;
+}
+
+/*-------------------- Main content-------------------*/
+.content {
+	width: 75%;
+	padding: 0px;
+	position: absolute;
+	top: 84px;
+	left: 220px;
+	/*border: solid purple 5px;*/
+}
+
+img {
+	position: relative;
+	left: 0px;
+	float: left;
+	margin: 0px 10px 10px 0px;
+	border: solid orange 5px;
+}
+
+/*--------------------- Footer -------------------------*/
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 80px;
+	width: 100%;
+	padding: 0px;
+	border-top: dashed #A9A9A9 2px;
+}
+
+footer ul li {
+	display: inline;
+}
+
+.foot {
+	text-align: center;
+}
+
+#pintrest, 
+#yahoo, 
+#vine {
+	margin: 5px 10px;
+}
+
+#copy {
+	text-align: left;
+}	
