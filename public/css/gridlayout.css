@@ -1,0 +1,39 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.containter {
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+}
+
+.row {
+	width: 100%;
+	/*background: gray;*/
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+	/*background: yellow;*/
+
+}
+.column {
+	float: left;
+	padding: 10px;
+	/*background: blue;*/
+}
+
+.column.one-third {
+	width: 33.33%;
+	background: orange;
+}
+
+.column.one-half {
+	width: 50%;
+	background: green;
+}
