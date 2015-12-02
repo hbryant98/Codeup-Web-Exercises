@@ -10,7 +10,7 @@ html {
 	width: 80%;
 	max-width: 1200px;
 }
-
+/*------------------ Rows */
 .row {
 	width: 100%;
 	/*background: gray;*/
@@ -20,7 +20,7 @@ html {
 	display: table;
 	clear: both;
 	/*background: yellow;*/
-
+/*------------------ Global Column Settings*/
 }
 .column {
 	float: left;
@@ -29,10 +29,12 @@ html {
 	border: solid black 2px;
 	/*background: blue;*/
 }
-
+/* -----------------Column Widths and styles*/
 .column.three-fourths {
 	width: 75%;
 	background: #00CE91;
+	height: 90px;
+	margin: 20px;
 }
 .column.two-thirds {
 	width: 66.66%;
@@ -67,6 +69,9 @@ html {
 .column.one-twelfth {
 	width: 8.3%;
 	background: blue;
-	/*margin-right: 2px;*/
+}
+/*---------------Column Margins*/
+.column.one-sixth.offset-one-fourth {
+	margin-left: 25px;
 }
 
