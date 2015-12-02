@@ -25,15 +25,32 @@ html {
 .column {
 	float: left;
 	padding: 10px;
+	margin-bottom: 5px;
+	border: solid black 2px;
 	/*background: blue;*/
 }
 
 .column.one-third {
 	width: 33.33%;
 	background: orange;
+	/*border: solid black 5px;*/
 }
 
 .column.one-half {
 	width: 50%;
 	background: green;
+	/*border: solid black 5px;*/
+	/*margin-bottom: 10px;*/
+}
+.column.one-fourth {
+	width: 25%;
+	background: red;
+}
+.column.one-sixth {
+	width: 16.667%;
+	background: yellow;
+}
+.column.one-eighth {
+	width: 12.5%;
+	background: gray;
 }
