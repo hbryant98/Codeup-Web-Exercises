@@ -30,17 +30,23 @@ html {
 	/*background: blue;*/
 }
 
-.column.one-third {
-	width: 33.33%;
-	background: orange;
-	/*border: solid black 5px;*/
+.column.three-fourths {
+	width: 75%;
+	background: #00CE91;
 }
-
+.column.two-thirds {
+	width: 66.66%;
+	background: #FF1493;
+	height: 70px;
+	margin-left: 10px;
+}
 .column.one-half {
 	width: 50%;
 	background: green;
-	/*border: solid black 5px;*/
-	/*margin-bottom: 10px;*/
+}
+.column.one-third {
+	width: 33.33%;
+	background: orange;
 }
 .column.one-fourth {
 	width: 25%;
@@ -54,3 +60,13 @@ html {
 	width: 12.5%;
 	background: gray;
 }
+.column.one-tenth {
+	width: 10%;
+	background: #9400D3;
+}
+.column.one-twelfth {
+	width: 8.3%;
+	background: blue;
+	/*margin-right: 2px;*/
+}
+
