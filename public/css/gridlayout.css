@@ -19,22 +19,19 @@ html {
 	content: "";
 	display: table;
 	clear: both;
-	/*background: yellow;*/
-/*------------------ Global Column Settings*/
 }
+/*------------------ Global Column Settings*/
 .column {
 	float: left;
 	padding: 10px;
 	margin-bottom: 5px;
 	border: solid black 2px;
-	/*background: blue;*/
 }
 /* -----------------Column Widths and styles*/
 .column.three-fourths {
 	width: 75%;
 	background: #00CE91;
 	height: 90px;
-	margin: 20px;
 }
 .column.two-thirds {
 	width: 66.66%;
@@ -70,8 +67,15 @@ html {
 	width: 8.3%;
 	background: blue;
 }
-/*---------------Column Margins*/
+
+/*---------------Column Margins and off-sets*/
 .column.one-sixth.offset-one-fourth {
 	margin-left: 25px;
+}
+.offset-one-fourth {
+	padding: 50px;
+}
+.column.one-fourth.offset-one-half {
+	margin-left: 50%;
 }
 
