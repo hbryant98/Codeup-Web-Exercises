@@ -1,0 +1,94 @@
+/*This is the style for the responsive.html*/
+/*CONTENTS
+*
+*SETTINGS
+*Box and Column sizing.............Everything back to the beginning
+*Global............................Global styles and config
+*Column Styles.....................Colors for columns
+*Relative Positioning settings.....Screen sizing
+**/
+
+/*------------------- Box and Column Sizing -----------------------*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.row {
+    width:100%;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*------------------- Global -----------------------*/
+
+.column {
+	min-height: 100px;
+	padding: 10px;
+	margin: 20px;
+	border: solid black 1px;
+}
+
+/*----------------- Coluumn Styles-------------------------*/
+
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.green {
+	background-color: green;
+}
+
+.purple {
+	background-color: purple;
+}
+
+.gold {
+	background-color: gold;
+}
+
+/*-----------------Relative Positioning -------------------------*/
+
+/* Small devices (tablets, up to 550px) */
+@media screen and (max-width: 550px) { 
+	.column {
+		width: 80%;
+		margin: 2%;
+		float: left; 
+	}	
+}
+
+/* Medium devices (screen sizes between 550px, up to 800px) */
+@media screen and (min-width: 550px) {
+    .column {
+        width: 30%;
+        margin: 1rem;
+        float: left;
+    }
+}
+/* Medium devices (screen sizes 800px and up) */
+@media screen and (min-width: 800px) {
+    .column {
+        width: 25%;
+        margin: 5%;
+        float: left;
+    }
+}
+
