@@ -16,34 +16,48 @@ h1 {
 	text-align: center;
 }
 h2 {
+	width: 400px;
+	padding: 10px;
+	margin: 10px;
 	color: aqua;
 	text-decoration: underline;	
 }
 
 
-
+dl {
+	margin: 10px;
+}
+dl>dd {
+	color: purple;
+	font-weight: bolder;
+}
 ol, ul, .top5 {
 	color: #00BFFF;
 	list-style-type: square;
 }
 
 
+
 table {
 	width: 500px;
 	padding: 10px;
 	border: 1px solid black;
-	margin: 10px 0;
+	margin: 10px;
 	background-color: #F5F5DC;
 	font-family: Georgia, serif;
 	/*font-size: 15px;*/
 	font-weight: bold;
 	color: black;
+	border-collapse: collapse;
 }
 th {
 	padding: 1px;
 	text-transform: uppercase;
 	text-align: center;
 }
+/*td:nth-child(even) {
+	background-color: white;
+}*/
 tr>td {
 	text-align: center;
 	border: 1px dotted red;
@@ -61,15 +75,16 @@ img {
 	margin: 10px;
 	/*float:left;*/
 	float: right;
-	position: relative;
-	right: 10px;
 }
 .basicinfo{
 	width: 1000px;
 	padding: 5px;
 	margin: 10px 20px;
 	font-family: Tahoma, Geneva, Sans-Serif; 
-	color: aqua;
+	color: aqua;	
+}
+.even {
+	background-color: white;
 }
 #fav-quote {
 	font-style: italic;
