@@ -39,6 +39,7 @@ body {
 ul {
 	list-style: none;
 	margin: 5px;
+	padding-left: 0;
 }
 
 .navbar {
@@ -46,8 +47,7 @@ ul {
 	left: 0;
 	width: 100%;
 	height: 40px;
-	/*how do I shift it left; there's padding of 40px; where is that originating from?*/
-}
+}	
 
 .nav-item {
 	text-align: left;
@@ -74,7 +74,7 @@ header {
 
 form {
 	width: 85%;
-	margin: 95px 350px;
+	margin: 95px 30%;
 	/*would like to know how to center this better; when use 25px auto for margin it does not center*/
 }
 
@@ -101,11 +101,10 @@ h4 {
 
 a.root-news:link {
 	color: blue;
-	/*this is not functioning...what is wrong with my syntax>*/
 }
 
 a.root-news:visited {
-	color: #00FF00;
+	color: red;
 }
 
 .content {
@@ -120,24 +119,19 @@ a.root-news:visited {
 	float: right;
 }
 
-.clearfix {
+/*.clearfix {
 	clear: both;
-}
+}*/
 
 /*--------------------- Footer -------------------------*/
 
-/*footer {
-	width: 100%;
-	padding-top: 10px;
-	text-align: center
-	border: solid black 3px;
-}*/
-/*when I attempt to target footer element the styling does not take effect;
-*when I target footer class, styling works. what is wrong here?*/
-
-.foot {
+footer {
+	float: left;
 	width: 100%;
 	padding-top: 10px;
 	text-align: center;
 	border: solid black 3px;
+	clear: both;
+	margin-top: 50px;
+	background-color: yellow;
 }
