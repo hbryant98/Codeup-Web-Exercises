@@ -42,6 +42,37 @@ html {
 	border: solid black 1px;
 }
 
+h2 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+/*-----------------Nav Bar -------------------------*/
+
+ul {
+	list-style: none;
+	margin: 1%;
+	padding-left: 0;
+}
+.topnav {
+	background-color: gray;
+	border: black solid 1px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.topnav-link {
+	display: inline;
+	padding-left: 10px;
+}
+
+#go,
+#fly,
+#free {
+	color: black;
+	padding: 5px;
+}
+
 /*----------------- Coluumn Styles-------------------------*/
 
 .red {
@@ -72,23 +103,91 @@ html {
 		width: 80%;
 		margin: 2%;
 		float: left; 
+	}
+
+	h2 {
+		width: 40%;
+		text-align: center;
 	}	
 }
 
-/* Medium devices (screen sizes between 550px, up to 800px) */
+/* devices (screen sizes between 550px, up to 800px) */
 @media screen and (min-width: 550px) {
+    .container {
+    	float: left;
+    }	
+
     .column {
         width: 30%;
         margin: 1rem;
         float: left;
     }
+
+	.topnav {
+		background-color: gray;
+		border: black solid 1px;
+		border-radius: 5px;
+		width: 20%;
+		height: 350px;
+		margin: 10px;
+		float: left;
+	}
+
+    .topnav-link {
+		padding-top: 10px;
+	}
+
+	#go,
+	#fly,
+	#free {
+		color: black;
+		font-size: 15px;
+		padding-bottom: 30px;
+	}
+	
+	h2 {
+		float: left;
+	}	
 }
-/* Medium devices (screen sizes 800px and up) */
+/*  devices (screen sizes 800px and up) */
 @media screen and (min-width: 800px) {
+    .container {
+    	float: left;
+    }	
+
     .column {
         width: 25%;
         margin: 5%;
         float: left;
     }
+
+    .topnav {
+		background-color: gray;
+		border: black solid 1px;
+		border-radius: 5px;
+		width: 20%;
+		max-width: 20%;
+		height: 550px;
+		margin: 10px;
+		float: left;
+	}
+
+    .topnav-link {
+    	float: left;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+
+	#go,
+	#fly,
+	#free {
+		color: black;
+		font-size: 15px;
+		padding-bottom: 30px;
+	}
+	
+	h2 {
+		float: left;
+	}
 }
 
