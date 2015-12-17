@@ -1,0 +1,311 @@
+/*This is the style for the final_project.html*/
+/*CONTENTS
+*
+*SETTINGS
+*Box sizing.............Everything back to the beginning
+*Global............................Global styles and config
+*Logo.....................Logo styles
+*Nav......................Navigation Bar styles
+*Header...................Main image styles
+*Aside....................Title and subtitle styles
+*Article..................Content styles
+*Footer...................Footer styles
+*Relative Positioning settings.....Screen sizing
+**/
+
+/*------------- Box Sizing ---------*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*------------- Global Settings ---------*/
+
+body {
+	background-color: white;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.containter {
+	height: 100%;
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+/*--------------------- Logo ----------------------*/
+
+.mark {
+	color: white;
+	background-color: yellow;
+	width: 30px;
+	height: 30px;
+	border-radius: 100px;
+	padding: left: 5px;
+	font-size: 25px;
+	text-align: center;
+	margin-left: -5px;
+	margin-top: 20px;
+	float: left;
+
+}
+
+#logo {
+	color: blue;
+	font-size: 30px;
+	font-family: Nixie One;
+	float: left;
+	overflow: hidden;
+}
+
+#every {
+	color: blue;
+	text-decoration: underline;
+	font-size: 35px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	text-transform: uppercase;
+	float: left;
+	margin-left: -125px;
+	margin-top: 40px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+/*--------------------- Nav Bar ----------------------*/
+
+ul {
+	list-style: none;
+	margin: 5px;
+	padding-left: 0;
+}
+
+.navbar {
+	top: 0;
+	margin-left: 100px;
+	width: 90%;
+	height: 40px;
+	float: left;
+}
+
+.nav-menu {
+	margin-left: 45px;
+}	
+
+.nav-item {
+	text-align: left;
+	display: inline;
+	padding-left: 0px;
+	border-left: 1px solid yellow;
+}
+
+/*.vertical {
+	height: 20px;
+	width: 20px;
+	border: 1px solid black;
+}*/
+
+.kline {
+	height: 15px;
+	width: 25px;
+	color: black;
+	/*border: 1px solid black;*/
+	margin-left: 15px;
+	z-index: 1;
+	position: absolute;
+	font-size: 10px;
+}
+
+.andrews {
+	height: 15px;
+	width: 25px;
+	color: black;
+	/*border: 1px solid black;*/
+	margin-left: 110px;
+	z-index: 1;
+	position: absolute;
+	font-size: 10px;
+}
+
+.jackson {
+	height: 15px;
+	width: 25px;
+	color: black;
+	/*border: 1px solid black;*/
+	margin-left: 243px;
+	z-index: 1;
+	position: absolute;
+	font-size: 10px;
+}
+
+.solder {
+	height: 15px;
+	width: 25px;
+	color: black;
+	/*border: 1px solid black;*/
+	margin-left: 350px;
+	z-index: 1;
+	position: absolute;
+	font-size: 10px;
+}
+
+.vollmer {
+	height: 15px;
+	width: 25px;
+	color: black;
+	/*border: 1px solid black;*/
+	margin-left: 457px;
+	z-index: 1;
+	position: absolute;
+	font-size: 10px;
+}
+
+#kline,
+#andrews, 
+#jackson, 
+#solder,
+#vollmer {
+	color: gray;
+	padding: 10px;
+	
+}
+
+/*--------------------- Header ----------------------*/
+.sabor {
+	width: 90%;
+	margin-left: 50px;
+	z-index: 0;
+}
+
+/*--------------------- Aside ----------------------*/
+
+aside {
+	width: 35%;
+	float: left;
+	margin-left: 45px;
+	margin-right: 15px;
+}
+
+h5 {
+	text-decoration: underline;
+	color: blue;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+h6 {
+	text-transform: uppercase;
+	font-size: 15px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.subtitle {
+	font-size: 45px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#gray-bar {
+	width: 100%;
+	height: 10px;
+	background-color: #DCDCDC;
+	margin-top: 10px;
+}
+
+/*--------------------- Article ----------------------*/
+
+article p {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 15px;
+	width: 85%;
+	margin-left: 50px;
+}
+
+/*--------------------- Footer ----------------------*/
+
+footer {
+	background-color: #002D73;
+	color: white;
+	text-transform: uppercase;
+	border: solid black 2px;
+	padding-top: 5px;
+}
+
+footer .copyright {
+	color: gray;
+	font-size: 8px;
+	margin: 2px 5px 10px 5px;
+	width: 350px;
+	float: left;
+	clear: left;
+}
+
+footer .tucsonfoot {
+	/*color: #00CED1;
+	font-size: 14px;*/
+	margin-top: -23px;
+	margin-left: 50px;
+	clear: left;
+}
+
+.tucson {
+	width: 50px;
+	height: 50px;
+	margin-left: 300px;
+	margin-top: -53px;
+	float: left;
+}
+
+.tuscon-label {
+	width: 50px;
+	margin-left: 400px;
+	margin-top: -70px;
+	color: #00CED1;
+	font-size: 14px;
+}
+
+.foot {
+	font-size: 35px;
+	float: left;
+	margin: 15px 30px 15px 25px;
+}
+
+.hyundai-logo {
+	width: 150px;
+	height: 80px;
+	margin-left: 20px;
+	margin-top: 10px;
+
+}
+
+.footer-container {
+	float: left;
+	width: 66%;
+}
+
+.car {
+	width: 340px;
+	height: 225px;
+	margin-left: 130px;
+	margin-right: 0px;
+	margin-top: 0px;
+	/*float: left;*/
+}
+
+
+/*-----------------Relative Positioning -------------------------*/
+
+/* Small devices (tablets, up to 550px) */
+/*@media screen and (max-width: 550px) { 
+	.column {
+		width: 80%;
+		margin: 2%;
+		float: left; 
+	}*/
