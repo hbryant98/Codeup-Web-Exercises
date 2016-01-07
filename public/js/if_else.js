@@ -17,16 +17,16 @@ var favorite = 'blue'; // TODO: change this to your favorite color from the list
 "use strict";
 if (color=="red") {
 	console.log ("Tomatoes are red.");
-} else if (color=="orange") {
+} else if (color==="orange") {
 	console.log ("Oranges are orange.");
-} else if (color=="yellow") {
+} else if (color==="yellow") {
 	console.log ("Bananas are yellow.");
-} else if (color=="green") {
+} else if (color==="green") {
 	console.log ("Celery is green.");
-} else if (color=="blue") {
+} else if (color==="blue") {
 	console.log ("Blueberries are blue.");
-} else if (color=="violet" || "indigo") {
+} else {
 	console.log ("I do not kow anything by that color.");
 }
-(color==favorite) ? console.log ("Blue is your favorite color.") : console.log ("This is not your favorite color");
+(color===favorite) ? console.log ("Blue is your favorite color.") : console.log ("This is not your favorite color");
 	
