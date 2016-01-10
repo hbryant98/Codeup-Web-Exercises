@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Break Loop JS</title>
+</head>
+<body>
+    <script> 	
+  	do {
+  		x = Math.floor((Math.random()*50)+1);
+
+  	} while (x % 2 === 0)
+  		console.log("Random number to skip is: " + x);
+
+
+	for (var i = 1; i < 50; i +=2) {
+		if (x == i) {
+			console.log("Yikes Skipping number: " + i);
+			continue;
+		}
+		console.log("Here is an odd number: " + i);
+	}
+// Below is the original statement I used that was a creative solution but did not follow the assignment guidelines using continue.
+
+		 //  	for (var i = 1; i < 50; i += 2) {
+ //  		if (i != x)
+	// 		console.log("Here is an odd number: " + i);
+	// }		
+    </script>
+</body>
+</html>
+		
