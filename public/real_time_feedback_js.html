@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>real time feedback js</title>
+</head>
+<body>
+    <script> 
+    "use strict"
+    var sentence;
+    var one;
+    var two;
+    var three;
+    var result;
+    var change;
+    var number;
+    var pounds;
+    var convert;
+    var string;
+
+    	// function capital(sentence) {
+    	// 	sentence = ("here is the message");
+    	// 	return  sentence.toUpperCase();
+    	// }
+    	// console.log(capital());
+
+
+
+    	// function three() {
+    	// 	one = "This ";
+    	// 	two = "is ";
+    	// 	three = "weird!";
+    	// 	result = one.concat(two,three);
+    	// 	return result;
+    	// }
+    	// console.log(three());
+
+
+
+
+    	// function temperature(number) {
+    	// 	change = ((number - 32) * .5556);
+    	// 	// return change;
+    	// 	console.log(change);
+    	// }
+
+    	// temperature(101);
+
+
+
+
+   //  	function kilograms(pounds) {
+   //  		convert = (pounds * .453592);
+			// document.write(convert);
+   //  	}
+
+   //  	kilograms(85);
+
+
+
+
+    	// function createLogin(string) {
+    	// 	var password;
+    	// 	var characters = 5;
+    	// 	password = prompt("Please enter a password that is at least 5 characters long, but less than 10.");
+
+    	// 	do {
+    	// 		console.log(password);
+    	// 		password = password.length;
+    	// 		console.log(password);
+    	// 		alert("Your password needs to be at least 5 characters long, but less than 10.");
+    	// 		prompt("Please enter a password.");	
+
+    	// 	} while ((password > characters) && (password < 11));	
+
+    	// 	alert("Your password has been accepted.");
+    	// }
+
+    	// createLogin();
+
+
+
+
+    	function confirmLetter(vowel) {
+    		var vowel;
+    		vowel = prompt("Please enter a letter of the alphabet.");
+    		vowel = vowel.toLowerCase();
+
+    		if (vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u") {
+    			document.write("You entered a vowel.");
+    		} else {
+    			document.write("You entered a consonant.");
+    		}
+    	}
+
+    	confirmLetter();
+
+
+
+
+    	 // array version
+    	// function isVowel(letter) {
+    	// 	var vowels = ["a", "e", "i", "o", "u"];
+    	//  	letter = prompt("please enter a letter of the alphabet.");
+    	// 	letter = letter.toLowerCase();
+
+	    // 	if (vowels.indexOf(letter) > -1) {
+	    // 		document.write("You entered a vowel.");
+	    // 	} else {
+	    // 		document.write("You entered a consonant.");
+	    // 	}
+	    // }	
+	    // isVowel();
+
+
+	    // function isVowel(letter) {
+    	// 	var vowels = ["a", "e", "i", "o", "u"];
+    	//  	letter = prompt("please enter a letter of the alphabet.");
+    	// 	letter = letter.toLowerCase();
+
+	    // 	if (vowels.indexOf(letter) > -1) {
+	    // 		document.write("You entered a vowel."); //could just say return true;
+	    // 	} else {
+	    // 		document.write("You entered a consonant."); //could just say return false;
+	    // 	}
+	    // }	
+	    // isVowel();
+
+	    //can use function in if statement:  if(isVowel("z")) {
+	    									// 	console.log("This is vowel")
+	    									// 	} else {
+	    									// 		console.log("This is a consonant");
+	    									// 	}
+	    									// }
+
+    	// function writeSomething(text) {
+    	// 	var text = "Some String";
+    	// 	document.write(text);
+    	// }
+
+    	// writeSomething();
+
+
+    </script>
+</body>
+</html>
