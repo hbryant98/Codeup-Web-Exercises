@@ -76,7 +76,7 @@ while(currentLocation!=winDestination){
 				alert("You can't go that way, remember?  Unless you want to go swimming!");
 			} else if (response == "drink the water"){
 				currentLocation = winDestination;
-				alert("You drank the water?! It's not potable water! Game over!!")
+				alert("You drank the water?! It's not potable water! Game over!!");
 			}
 		break;	
 		case "house":
@@ -97,9 +97,10 @@ while(currentLocation!=winDestination){
 alert(winMessage);	
 	
 
-// var counter = 0;
+// 
 
 //  function add() {
-//     counter += 1;
+	// var counter = 0;
+// 		counter ++;
 //  }	
 //  console.log (counter)
