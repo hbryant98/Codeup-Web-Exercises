@@ -7,6 +7,7 @@ var currentLocation = "forest";
 var winDestination = "insideHouse";
 var response;
 
+
 //LOCATION MESSAGES - keep these or write your own.
 var forestMessage = "Dave is in a forest.  The smell of wet leaves and maple syrup reminds Dave of late saturday morning breakfasts at his grandma\'s house.  Dave can\'t go north or east because the trees get to dense.  To his west, Dave can see a house.  There's a clearing to his south.";
 var clearingMessage = "This clearing is... surprisingly clear.  There\'s nothing here at all and after a moment Dave starts to question his motives for coming here.  Why did he come this way?  Should he leave?  More importantly, can Dave even make these choices or is he under the command of unseen forces.  Is some stranger at a keyboard somehwere controlling every move.  In any case, it would take far too long to walk south or east across the clearing.  There's a forest to his north and a pond to his west.";
@@ -37,18 +38,20 @@ while(currentLocation!=winDestination){
 		case "forest":
 			alert(forestMessage);
 			response = prompt("Where would you like to go next?");
+			response = response.toLowerCase();
 			if(response == "go west"){
 				currentLocation = "house";
 				alert(houseMessage);	
 			} else if (response == "go south"){
 				currentLocation = "clearing";
-			} else if (response== "go east" || "go north"){
+			} else if (response == "go east" || "go north"){
 				alert("You can't go that way, remember? Dave cannot go north or east.");
 			}
 		break;
 		case "clearing":
 			alert(clearingMessage);
 			response = prompt("Where would you like to go next?");
+			response = response.toLowerCase();
 			if(response == "go west"){
 				currentLocation = "pond";
 			} else if (response == "go north"){
@@ -62,6 +65,7 @@ while(currentLocation!=winDestination){
 		case "pond":
 			alert(pondMessage);
 			response = prompt("Where would you like to go next?");
+			response = response.toLowerCase();
 			if(response == "go north"){
 				currentLocation = "house";
 			} else if (response == "go east"){
@@ -70,7 +74,7 @@ while(currentLocation!=winDestination){
 				response = prompt("Where would you like to go next?");
 			} else if (response == "go south" || "go west"){
 				alert("You can't go that way, remember?  Unless you want to go swimming!");
-			} else if (response == "Drink the water."){
+			} else if (response == "drink the water"){
 				currentLocation = winDestination;
 				alert("You drank the water?! It's not potable water! Game over!!")
 			}
@@ -78,6 +82,7 @@ while(currentLocation!=winDestination){
 		case "house":
 			alert(houseMessage);
 			response = prompt("Where would you like to go next?");
+			response = response.toLowerCase();
 			if(response == "enter the house"){
 				currentLocation = "insideHouse";
 				// alert(winMessage);
