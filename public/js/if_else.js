@@ -15,7 +15,7 @@ var favorite = 'blue'; // TODO: change this to your favorite color from the list
 // TODO: Using the ternary operator, conditionally log a statement that
 //       says whether the random color matches your favorite color.
 "use strict";
-if (color=="red") {
+if (color==="red") {
 	console.log ("Tomatoes are red.");
 } else if (color==="orange") {
 	console.log ("Oranges are orange.");
