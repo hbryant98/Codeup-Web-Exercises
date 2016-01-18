@@ -6,16 +6,14 @@
 <body>
     <script> 
     "use strict"
-    var sentence;
-    var one;
-    var two;
-    var three;
-    var result;
-    var change;
-    var number;
+    
     var pounds;
     var convert;
     var string;
+
+
+ // change input to uppercase//
+////////////////////////////////////////
 
     	// function capital(sentence) {
     	// 	sentence = ("here is the message");
@@ -25,19 +23,42 @@
 
 
 
-    	// function three() {
-    	// 	one = "This ";
-    	// 	two = "is ";
-    	// 	three = "weird!";
+
+ // change input to uppercase//
+////////////////////////////////////////
+
+    	// function three(one, two, three) {
+    	// 	one = ("This ");
+    	// 	two = ("is ");
+    	// 	three = ("weird!");
+    	// 	var result;
     	// 	result = one.concat(two,three);
     	// 	return result;
     	// }
     	// console.log(three());
 
+// Another way to concatonate is below //
+////////////////////////////////////////
+
+		// function three(one, two, three) {
+  //   		var one;
+  //   		var two;
+  //   		var three;
+  //   		var result;
+  //   		result = one.concat(two,three);
+  //   		return result;
+  //   	}
+  //   	console.log(three("This ","is ", "weird!"));
 
 
+
+
+ // change farenheit to celsius/
+////////////////////////////////////////
 
     	// function temperature(number) {
+    	// 	var change;
+    	// 	var number;
     	// 	change = ((number - 32) * .5556);
     	// 	// return change;
     	// 	console.log(change);
@@ -48,6 +69,9 @@
 
 
 
+ // change kilograms to pounds//
+////////////////////////////////////////
+
    //  	function kilograms(pounds) {
    //  		convert = (pounds * .453592);
 			// document.write(convert);
@@ -57,6 +81,9 @@
 
 
 
+
+ // veifying string is between 5 and 10 letters in length//
+////////////////////////////////////////
 
     	// function createLogin(string) {
     	// 	var password;
@@ -80,24 +107,27 @@
 
 
 
-    	function confirmLetter(vowel) {
-    		var vowel;
-    		vowel = prompt("Please enter a letter of the alphabet.");
-    		vowel = vowel.toLowerCase();
+ // verify letter is a vowel //
+////////////////////////////////////////
 
-    		if (vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u") {
-    			document.write("You entered a vowel.");
-    		} else {
-    			document.write("You entered a consonant.");
-    		}
-    	}
+    	// function confirmLetter(vowel) {
+    	// 	var vowel;
+    	// 	vowel = prompt("Please enter a letter of the alphabet.");
+    	// 	vowel = vowel.toLowerCase();
 
-    	confirmLetter();
+    	// 	if (vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u") {
+    	// 		document.write("You entered a vowel.");
+    	// 	} else {
+    	// 		document.write("You entered a consonant.");
+    	// 	}
+    	// }
+
+    	// confirmLetter();
 
 
+   // another way to vrify letter is a vowel the array version//
+   /////////////////////////////////
 
-
-    	 // array version
     	// function isVowel(letter) {
     	// 	var vowels = ["a", "e", "i", "o", "u"];
     	//  	letter = prompt("please enter a letter of the alphabet.");
@@ -112,25 +142,36 @@
 	    // isVowel();
 
 
+
+// another way to vrify letter is a vowel the second array version//
+   /////////////////////////////////
+
 	    // function isVowel(letter) {
     	// 	var vowels = ["a", "e", "i", "o", "u"];
     	//  	letter = prompt("please enter a letter of the alphabet.");
     	// 	letter = letter.toLowerCase();
 
 	    // 	if (vowels.indexOf(letter) > -1) {
-	    // 		document.write("You entered a vowel."); //could just say return true;
+	    // 		return true;
 	    // 	} else {
-	    // 		document.write("You entered a consonant."); //could just say return false;
+	    // 		return false;
 	    // 	}
 	    // }	
 	    // isVowel();
 
-	    //can use function in if statement:  if(isVowel("z")) {
+ // notes:  can use function in if statement:  if(isVowel("z")) {
 	    									// 	console.log("This is vowel")
 	    									// 	} else {
 	    									// 		console.log("This is a consonant");
 	    									// 	}
 	    									// }
+
+    	
+
+
+
+ // use document.write to display string on page //
+////////////////////////////////////////
 
     	// function writeSomething(text) {
     	// 	var text = "Some String";
