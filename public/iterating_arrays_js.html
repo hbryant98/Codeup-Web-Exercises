@@ -7,7 +7,7 @@
     <script> 
     "use strict"
 
-    // todo:
+ // todo:
 // Create an array of 4 names using literal array notation, in a variable called 'names'.
 
 // todo:
@@ -18,12 +18,35 @@
 
 var names = ['Trenton', 'Mason', 'Abigayl', 'Holly'];
 
-console.log('The number of elements in the names array is ' + names.length + '.');
+// console.log('The number of elements in the names array is ' + names.length + '.');
 
-console.log('The first name in the array is ' + names[0]);
-console.log('The second name in the array is ' + names[1]);
-console.log('The third name in the array is ' + names[2]);
-console.log('The fourth name in the array is ' + names[3]);
+// console.log('The first name in the array is ' + names[0]);
+// console.log('The second name in the array is ' + names[1]);
+// console.log('The third name in the array is ' + names[2]);
+// console.log('The fourth name in the array is ' + names[3]);
+
+
+//to do: exercise 4.5.1 modify above code using for loop
+// for (var x = 0; x < names.length; x++) {
+// 	console.log('The name at index ' + x + ' is ' + names[x] + '.');
+// }
+ names.forEach(function (name, index) {
+ 	console.log('The name at index ' + index + ' is ' + name);
+ });
+			//note for self:  format is element, index, array. you can change element to whatever you want, index is usually i and array is not typically there. include what is needed only.
+
+
+//todo: extra exercise
+//function that returns random color
+// var colors = ['red', 'blue', 'green', 'yellow'];
+// var rand = Math.floor(Math.random() * 10);
+// console.log(rand;)
+// if (rand < colors.length) {
+// 	console.log(colors[rand]);
+// } else {
+// 	console.log('That number is not in the array');
+// }
+
 
     </script>
 </body>
