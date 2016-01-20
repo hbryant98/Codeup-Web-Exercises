@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects JSON </title>
+</head>
+<body>
+    <script> 
+    "use strict"
+   
+    // todo:
+// Create an array of objects that represent books.
+// Each book should have a title and an author.
+// The book author should be an object with a firstName and lastName.
+// Be creative and add at least 5 books to the array
+// var books = [todo];
+	var books = 
+	 [
+
+	{
+		"author": [{
+			"firstName": "Jacob",
+			"lastName": "Grimm"
+		}, {
+			"firstName": "Wiilhelm",
+			"lastName": "Grimm"
+		}],
+		"bookTitle": "Snow White and the Seven Dwarfs",
+		"bookType": "Children",
+		"bookIllustrator": "Nancy Burkett"
+	},
+
+	{
+		"author": [{
+			"firstName": "Chris",
+			"lastName": "Van Allsburg"
+		}],
+		"bookTitle": "The Garden of Abdul Gasazi",
+		"bookType": "Children",
+		"bookIllustrator": "Chris Van Allsburg"
+	},
+
+	{
+		"author": [{
+			"firstName": "Maurice",
+			"lastName": "Sendak"
+		}],
+		"bookTitle": "Outside Over There",
+		"bookType": "Children",
+		"bookIllustrator": "Maurice Sendak"
+	},
+
+	{
+		"author": [{
+			"firstName": "Shaun",
+			"lastName": "Tan"
+		}],
+		"bookTitle": "The Arrival",
+		"bookType": "Children",
+		"bookIllustrator": "Nancy Burkert"
+	}, {
+		"author": [{
+			"firstName": "David",
+			"lastName": "Wiesner"
+		}],
+		"bookTitle": "Flotsam",
+		"bookType": "Children",
+		"bookIllustrator": "David Wiesner"
+	}
+]	
+// log out the books array
+console.log(books);
+
+// todo:
+// Loop through the array of books using .forEach and print out the specified information about each one.
+// start loop here
+books.forEach (function(books) {
+    // console.log("Book #" + books.id);
+    console.log("Title: " + books.bookTitle);
+    console.log("Author: " + books.author[0].firstName + " " + books.author[0].lastName);
+    console.log("Illustrator: " + books.bookIllustrator);
+    console.log("Type: " + books.bookType);
+// end loop here
+});
+
+
+    </script>
+</body>
+</html> 
