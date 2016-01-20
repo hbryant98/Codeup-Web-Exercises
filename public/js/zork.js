@@ -6,6 +6,7 @@
 var currentLocation = "forest";
 var winDestination = "insideHouse";
 var response;
+var loseDestintion;
 
 
 //LOCATION MESSAGES - keep these or write your own.
@@ -16,7 +17,8 @@ var pondMessage = "Dave comes to a pond and nearly stumbles in. The water looks 
 
 var houseMessage = "Dave finally reaches a house.  Is it his house?  His memory has been hazy since the accident.  The house is fenced in to the north and west.  He can see a forest to his east and a pond to his south.";
 
-var winMessage = "Dave collapses on the couch inside the door.  He\'s still not sure this is his house but he feels a sense of accomplishment.  If life were a game, he\'d surely be winning."
+var winMessage = "Dave collapses on the couch inside the door.  He\'s still not sure this is his house but he feels a sense of accomplishment.  If life were a game, he\'d surely be winning. Just like you!";
+var lostMessage = "You drank the water?! It's not potable water! Game over!!"
 
 
 
@@ -39,62 +41,82 @@ while(currentLocation!=winDestination){
 			alert(forestMessage);
 			response = prompt("Where would you like to go next?");
 			response = response.toLowerCase();
+
 			if(response == "go west"){
 				currentLocation = "house";
-				alert(houseMessage);	
+				// alert(houseMessage);	
+
 			} else if (response == "go south"){
 				currentLocation = "clearing";
-			} else if (response == "go east" || "go north"){
+
+			} else  if (response == "go east" || "go north"){
 				alert("You can't go that way, remember? Dave cannot go north or east.");
 			}
-		break;
+			break;
+
 		case "clearing":
 			alert(clearingMessage);
 			response = prompt("Where would you like to go next?");
 			response = response.toLowerCase();
+
 			if(response == "go west"){
 				currentLocation = "pond";
+
 			} else if (response == "go north"){
 				currentLocation = "forest";
 				alert(forestMessage);
 				response = prompt("Where would you like to go next?");
-			} else if (response == "go east" || "go south"){
+
+			} else  if (response == "go east" || "go south"){
 				alert("You can't go that way, remember?  It will take too long to walk this way!");
 			}
-		break;
+			break;
+
 		case "pond":
 			alert(pondMessage);
 			response = prompt("Where would you like to go next?");
 			response = response.toLowerCase();
+
 			if(response == "go north"){
 				currentLocation = "house";
+
 			} else if (response == "go east"){
 				currentLocation = "clearing";
 				alert(clearingMessage);
 				response = prompt("Where would you like to go next?");
+
+			} else  if (response == "drink the water"){	
+				currentLocation = "losegame";	
+
 			} else if (response == "go south" || "go west"){
-				alert("You can't go that way, remember?  Unless you want to go swimming!");
-			} else if (response == "drink the water"){
-				currentLocation = winDestination;
-				alert("You drank the water?! It's not potable water! Game over!!");
+				currentLocation = "pond";
+				alert("You can't go that way, remember?  Unless you want to go swimming!");		
 			}
-		break;	
+			break;
+
+		case "losegame":
+			alert(lostMessage);
+			break;
+
 		case "house":
 			alert(houseMessage);
 			response = prompt("Where would you like to go next?");
 			response = response.toLowerCase();
-			if(response == "enter the house"){
+
+			if (response == "enter the house"){
 				currentLocation = "insideHouse";
-				// alert(winMessage);
+				alert(winMessage);		
+		
 			} else if (response == "go south" || "go north" || "go east" || "go west"){
-				alert("Don't you want to enter the house?");
+				alert("Don't you want to enter the house?");		
 			}
-		break;
+			break;
 		
 		default:
+				alert("You don't even know where you are, do you Dave?");
 	}		
 }
-alert(winMessage);	
+// alert(winMessage);	
 	
 
 // 
