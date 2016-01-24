@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 550px; /*1000px*/
+            height: 475px; /*//680px*/
+            padding-right: 10px;
+        }
+
+        #bodyContent {
+            width: 100px;
+            height: 25px;
+            font-size: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Guanabanas</h3>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkU_jBS2bm7PZrDPgxifPgg7xXNTz5bec"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        var address = "6960 N Hwy 1A1, Jupiter, FL 33477";
+
+        var geocoder = new google.maps.Geocoder();
+
+       geocoder.geocode({ "address": address }, function(results, status) {
+         // Check for a successful result
+
+        if (status == google.maps.GeocoderStatus.OK) {
+
+                // Recenter the map over the address
+             console.log(results); /*will take out when done */  
+             map.setCenter(results[0].geometry.location);
+
+             var marker = new google.maps.Marker({
+                // "position": codeup,
+                "position": results[0].geometry.location,
+                "map": map,
+                "animation": google.maps.Animation.DROP
+             });
+
+             var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h6 id="firstHeading" class="firstHeading">Guanabanas</h6>'+
+            '<div id="bodyContent">'+
+            '<p><b>Guanabanas</b>, is a waterfront restaurant and bar paradise in Jupiter, FL including lush landscapes and tropical cuisine for the ultimate waterfront dining.</p>'+
+            '<p><a href="https://guanabanas.com">'+
+             'https://guanabanas.com</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>';
+
+             var info = new google.maps.InfoWindow({
+            // content: "Guanabanas: Island Themed restaurant featuring Tiki Bar"
+            content: contentString
+            });
+
+             // info.open(map, marker);
+             google.maps.event.addListener(marker, 'click', function() {
+            info.open(map,marker);
+            });
+
+        } else {
+
+            // Show an error message with the status if our request fails
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+        });
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 14,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  226.942458,
+                lng: -80.080784
+            },
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    })();
+
+        // console.log(Date('miliseconds'));
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
