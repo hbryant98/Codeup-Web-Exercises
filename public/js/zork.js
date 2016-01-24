@@ -126,3 +126,10 @@ while(currentLocation!=winDestination){
 // 		counter ++;
 //  }	
 //  console.log (counter)
+// var pond = {};
+// pond.validDirections = ['north', 'east'];
+// var player = {};
+// player.name = prompt('what is your name?');
+// player.goEast = function() {
+
+// }
