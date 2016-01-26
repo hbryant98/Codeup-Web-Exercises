@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Exercises</title>
+    <meta charset="utf-8">
+
+</head>
+<body>
+    <h1 class="heading" id="mainHeading"> The Beginning of jQuery</h1>
+    <div class="container" id="mainContainer">
+    	<p class="mainContent" id="para1">
+    		I am hopeful that jQuery is an easy concept for my brain to grasp. I have watched some videos on jQuery and see what items can be used in future assignments.  I only hope that I will feel more confident upon completion of those assignments than when I completed the html to print assignment.
+    	</p>
+    	<h4 class="listTitle">jQuery I can potentially use in future assignments:</h4>
+    	<ul class="knowledge">
+    		<li class="list1" id="one">
+    			Hide
+    		</li>
+    		<li class="list1" id="two">
+    			Show
+    		</li>
+    		<li class="list1" id="three">
+    			Click
+    		</li>
+    		<li class="list1" id="four">
+    			Use of milliseconds
+    		</li>
+
+    	</ul>	
+	</div>
+   
+   <!--jQuery local file -->
+    <script src="/js/jquery.js"></script>
+
+    <script> 
+    "use strict"
+
+    $(document).ready(function() {
+    	console.log('The DOM has finished loading!');
+    	var contents = $('#mainHeading');
+    	alert(contents.html());
+    	$('.list1').css('border', '1px solid red');
+    	// var contents = $('#para1');
+    	// alert(contents.html());
+    	/*var contents = $('#one'); /*this was the duplicate id portion of the assignment on 5.1.1 */
+    	/*alert(contents.html());  */
+    	
+    });
+
+    
+    // })
+
+     </script>
+</body>
+</html> 
