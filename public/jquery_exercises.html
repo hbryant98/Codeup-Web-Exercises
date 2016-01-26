@@ -37,9 +37,13 @@
 
     $(document).ready(function() {
     	console.log('The DOM has finished loading!');
-    	var contents = $('#mainHeading');
-    	alert(contents.html());
-    	$('.list1').css('border', '1px solid red');
+    	// var contents = $('#mainHeading');
+    	// alert(contents.html());
+    	// $('.list1').css('border', '1px solid red');
+    	$('li').css('font-size', '20px');
+    	$('h1, p, li').css('background-color', 'yellow');
+    	var headingContents = $('h1');
+    	alert(headingContents.html());
     	// var contents = $('#para1');
     	// alert(contents.html());
     	/*var contents = $('#one'); /*this was the duplicate id portion of the assignment on 5.1.1 */
