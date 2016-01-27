@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Exercises</title>
+    <meta charset="utf-8">
+    <style>
+
+    	dt {
+    		font-size: 12px;
+    	}
+
+    	dd {
+    		font-size: 10px;
+    	}
+
+    	.title {
+    		text-align: center;
+    	}
+
+    	.invisible {
+    		display: none;
+    	}
+
+    	#answers {
+    		font-size: 8px;
+    	}
+
+    </style>
+
+</head>
+<body>
+	<h1 class="title">National Parks FAQs</h1>
+	<dl>
+		<dt>How many acres of land do the National Parks cover?</dt>
+		<dd class="invisible">There are over 407 sites in the National Park System covering more than 84 million acres of land</dd>
+		<dt>How many miles long is the Appalachian trail?</dt>
+		<dd class="invisible">The Appalachian trail is a 2,185 mile footpath that traverses scenic, wooded, wild lands</dd>
+		<dt>How many people visit the National Parks each year?</dt>
+		<dd class="invisible">In 2014, more than 290 million people visited National Parks</dd>
+		<dt>What is the nation's deepest cave?</dt>
+		<dd class="invisible">America's deepest cave is at Carlsbad Caverns; it is 1, 593 feet deep</dd>
+		<dt>What is the oldest protected area (park) in America?</dt>
+		<dd class="invisible">Hot Springs National park, which became a park in 1921.</dd>
+		<dt>How many species of vertebrates are supported in Yosemite National park?</dt>
+		<dd class="invisible">There are over 400 species of vertebrates including fish, bird, mammals, amphibians and reptiles</dd>
+		<dt>How many waterfalls are in Yellowstone National Park?</dt>
+		<dd class="invisible">There are over 300 waterfalls, 1 active volcano and thousands of petrified trees</dd>
+		<dt>How many battlefields or military parks are in the National Park System?</dt>
+		<dd class="invisible">There are 25.</dd>
+		<dt>How many seashores are in the National Park System?</dt>
+		<dd class="invisible">There are 10 seashores.</dd>
+		<dt>How many National Monuments are in the National Park System?</dt>
+		<dd class="invisible">There are 78.</dd>
+	</dl>	
+	<a href="#" id="answers">Click to view answers to each FAQ.</a>
+
+<!--jQuery local file -->
+    <script src="/js/jquery.js"></script>
+
+    <script> 
+    "use strict"
+
+    $(document).ready(function() {
+    	console.log('The DOM has finished loadting');
+
+    	$('#answers').click(function(event) {
+    		event.preventDefault();
+    		$('dd').toggleClass('invisible');
+    	});	
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html> 	
