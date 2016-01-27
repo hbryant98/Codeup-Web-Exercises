@@ -54,6 +54,29 @@
 	</dl>	
 	<a href="#" id="answers">Click to view answers to each FAQ.</a>
 
+	<h3 class="state-park">Arches National Park</h3>
+		<ul class="facts">
+			<li>This site features more than 2,000 natural sandstone arches, including the famous Delicate Arch.</li>
+            <li>Devils Garden Campground is located eighteen miles from the park entrance and is open year-round.</li>
+            <li>Facilities include potable water, picnic tables, grills, and both pit-style and flush toilets. </li>
+            <li>Bring your own wood or charcoal for the grills.</li>
+		</ul>
+
+	<h3 class="state-park">Badlands National Park</h3>
+		<ul class="facts">
+			<li>The Badlands are a collection of buttes, pinnacles, spires, and grass prairies.</li>
+            <li>Extreme temperatures, lack of water, and the exposed rugged terrain led to this name.</li>
+            <li>To fully experience most of what the Badlands has to offer, it takes two days.</li>
+            <li>To drive through the park and stop at a few overlooks, it takes about two hours.</li>
+		</ul>
+	<h3 class="state-park">Carlsbad Caverns National Park</h3>
+		<ul class="facts">
+			<li>Carlsbad Caverns has 117 caves, the longest of which is over 120 miles (190 km) long.</li>
+            <li>The park is open every day, except Thanksgiving, Christmas (December 25) and New Year's Day (January 1), weather and road conditions permitting.</li>
+            <li>Purchase cave tickets at the ticket counter inside the visitor center.</li>
+            <li>Self-guided and ranger-led tours of Carlsbad Cavern are available daily.</li>
+		</ul>		
+
 <!--jQuery local file -->
     <script src="/js/jquery.js"></script>
 
@@ -66,7 +89,16 @@
     	$('#answers').click(function(event) {
     		event.preventDefault();
     		$('dd').toggleClass('invisible');
+    	});
+
+    	$('ul').each(function() {
+    		 $(this).children().first().css('font-weight', 'bold');	
+    		});
+
+    	$('li').click(function() {
+    		$(this).parent().addClass('invisible');
     	});	
+    		
     });
 
 
