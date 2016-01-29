@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+   </head>
+<body>
+	<h3>Let's Do Some Math</h3>
+	
+	<form>
+		<label for="left"></label>
+		<input type="text" name="left" class="numfield" id="left" placeholder="Click a number">
+		
+		<label for="middle"></label>	
+		<input type="text" name="middle" class="numfield" id="middle" placeholder="Click an operator">
+		
+		<label for="right"></label>
+		<input type="text" name="right" class="numfield" id="right" placeholder="Click a number">
+
+		<label for="total">=</label>
+		<input type="text" name="total" class="numfield" id="total" placeholder="Total">
+
+		<p>	
+		<input type="button" class="display" name="btn1" id="btn1" value="1">
+		<input type="button" class="display" name="btn2" id="btn2" value="2">
+		<input type="button" class="display" name="btn3" id="btn3" value="3">
+		<input type="button" class="display" name="plus" id="plus" value="+">
+		</p>
+		<p>
+		<input type="button" class="display" name="btn4" id="btn4" value="4">
+		<input type="button" class="display" name="btn5" id="btn5" value="5">
+		<input type="button" class="display" name="btn6" id="btn6" value="6">
+		<input type="button" class="display" name="minus" id="minus" value="-">
+		</p>
+		<p>
+		<input type="button" class="display" name="btn7" id="btn7" value="7">
+		<input type="button" class="display" name="btn8" id="btn8" value="8">
+		<input type="button" class="display" name="btn9" id="btn9" value="9">
+		<input type="button" class="display" name="multiply" id="multiply" value="*">
+		</p>
+		<p>
+		<input type="button" class="display" name="clear" id="clear" value="C">
+		<input type="button" class="display" name="btn0" id="btn0" value="0">
+		<input type="button" class="display" name="equals" id="equals" value="=">
+		<input type="button" class="display" name="divide" id="divide" value="/">
+	</p>
+	</form>
+
+	<!--jQuery local file -->
+    <script src="/js/jquery.js"></script>
+
+    <script> 
+    "use strict"
+    var num1 = "";
+    var currentField = '#left';
+    var math = "";
+    var whole = "";
+    $(document).ready(function() {
+    	$('#btn1').click(function() {
+    		num1 = num1 + '1';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn2').click(function() {
+    		num1 = num1 + '2';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn3').click(function() {
+    		num1 = num1 + '3';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn4').click(function() {
+    		num1 = num1 + '4';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn5').click(function() {
+    		num1 = num1 + '5';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn6').click(function() {
+    		num1 = num1 + '6';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn7').click(function() {
+    		num1 = num1 + '7';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn8').click(function() {
+    		num1 = num1 + '8';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn9').click(function() {
+    		num1 = num1 + '9';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn0').click(function() {
+    		num1 = num1 + '0';
+    		$(currentField).val(num1);
+    	});
+    	$('#plus').click(function() {
+    		math = '+';
+    		$('#middle').val(math);
+    	});
+    	$('#minus').click(function() {
+    		math = '-';
+    		$('#middle').val(math);
+    	});
+    	$('#multiply').click(function() {
+    		math = '*';
+    		$('#middle').val(math);
+    	});
+    	$('#divide').click(function() {
+    		math = '/';
+    		$('#middle').val(math);
+    	});
+
+
+    	$('.display').click(function() {
+    		if (math !== '') {
+    			currentField = '#right';
+    			num1 = "";
+    		}
+    	});
+
+    	$('#equals').click(function() {
+    		var a = parseFloat($('#left').val());
+    		var b = parseFloat($('#right').val());
+    		if (math == '+') {
+    			whole = a + b;
+    			
+    		} else if (math == '-') {
+    			whole = a - b;
+    		} else if (math == '*') {
+    			whole = a * b;	
+    		} else if (math == '/') {
+    			whole = a / b;
+    		};
+    		$('#total').val(whole);
+    	});
+
+    	$('#clear').click(function() {
+    		$('.numfield').val("");
+    		currentField = '#left';
+    	});
+    });
+
+
+    </script>
+</body>
+</html>  
+
+
+<!-- $('calculate').click(function() {
+	
+}); -->
