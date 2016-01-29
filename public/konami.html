@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+
+        var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]
+
+       
+        $(document).keyup(function(event) {
+            console.log(event.keyCode);
+
+            if(event.keyCode == konami[0]) {
+            	console.log('so far so good');
+            	konami.shift();
+            	console.log(konami);
+            } 
+           else if(event.keyCode !== konami[0]) {
+           	alert('If at first you do not succedd, try try again by refreshing the page!');
+           } 
+        });
+      });  
+    </script>
+</body>
+</html>
