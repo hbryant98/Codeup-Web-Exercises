@@ -3,22 +3,28 @@
 <head>
     <title>Calculator</title>
     <meta charset="utf-8">
+
+    <!--CSS Reset -->
+	<link rel="cssstylereset" href="/css/normalize.css">
+
+	<!-- CSS page -->
+	<link rel="stylesheet" href="/css/calculator.css">
    </head>
 <body>
 	<h3>Let's Do Some Math</h3>
 	
 	<form>
 		<label for="left"></label>
-		<input type="text" name="left" class="numfield" id="left" readonly="readonly" placeholder="Click a number">
+		<input type="text" name="left" class="numfield" id="left" readonly="readonly" placeholder="">
 		
 		<label for="middle"></label>	
-		<input type="text" name="middle" class="numfield" id="middle"  readonly="readonly" placeholder="Click an operator">
+		<input type="text" name="middle" class="numfield" id="middle"  readonly="readonly" placeholder="">
 		
 		<label for="right"></label>
-		<input type="text" name="right" class="numfield" id="right" readonly="readonly" placeholder="Click a number">
+		<input type="text" name="right" class="numfield" id="right" readonly="readonly" placeholder="">
 
 		<label for="total">=</label>
-		<input type="text" name="total" class="numfield" id="total" readonly="readonly" placeholder="Total">
+		<input type="text" name="total" class="numfield" id="total" readonly="readonly" placeholder="">
 
 		<p>	
 		<input type="button" class="display" name="btn1" id="btn1" value="1">
@@ -55,9 +61,12 @@
     var currentField = '#left';
     var math = "";
     var whole = "";
+    alert('Click the numbers to start your calculation!');
     $(document).ready(function() {
     	$('#btn1').click(function() {
+    		console.log(num1);
     		num1 = num1 + '1';
+    		console.log(num1);
     		$(currentField).val(num1);
     	});
     	$('#btn2').click(function() {
@@ -99,25 +108,30 @@
     	$('#plus').click(function() {
     		math = '+';
     		$('#middle').val(math);
+    		num1 = "";
     	});
     	$('#minus').click(function() {
     		math = '-';
     		$('#middle').val(math);
+    		num1 = "";
     	});
     	$('#multiply').click(function() {
     		math = '*';
     		$('#middle').val(math);
+    		num1 = "";
     	});
     	$('#divide').click(function() {
     		math = '/';
     		$('#middle').val(math);
+    		num1 = "";
     	});
 
 
     	$('.display').click(function() {
+    		console.log(num1);
     		if (math !== '') {
     			currentField = '#right';
-    			num1 = "";
+    			
     		}
     	});
 
@@ -140,6 +154,7 @@
     	$('#clear').click(function() {
     		$('.numfield').val("");
     		currentField = '#left';
+    		math = "";
     	});
     });
 
@@ -149,6 +164,5 @@
 </html>  
 
 
-<!-- $('calculate').click(function() {
+
 	
-}); -->
