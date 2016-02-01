@@ -1,0 +1,66 @@
+/*This is the style for the layouts.html*/
+/*CONTENTS
+*
+*SETTINGS
+*Global............Global styles and config
+*
+*Input Fields.......styles for text input data fields
+*Buttons.........styles for calculator buttons
+
+**/
+
+/*------------------- Global -----------------------*/
+
+body {
+background-color: gray;
+text-align: center;
+}
+
+h3 {
+	text-align: center;
+	color: navy;
+}
+
+/*------------------- Input Fields -----------------------*/
+
+.numfield {
+	border: 1px navy solid;
+	background-color: #D3D3D3;
+}
+
+#left,
+#right,
+#total {
+	width: 40px;
+}
+
+#middle {
+	width: 10px;
+}
+
+/*------------------- Buttons -----------------------*/
+
+.display {
+	border: 1px navy solid;
+	border-radius: 5px;
+	width: 35px;
+}
+
+
+
+#plus,
+#minus,
+#multiply,
+#divide {
+	width: 50px;
+	background-color: #00FF66;
+}
+
+#clear {
+	background-color: red;
+}
+
+#equals {
+	background-color: orange;
+}
+
