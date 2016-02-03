@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax Blog</title>
+    <meta charset="utf-8">
+
+    <!--CSS Reset -->
+	<link rel="cssstylereset" href="/css/normalize.css">
+	<!--Bootstrap -->
+	<link src="/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>	
+	<h3>My Blog</h3>
+	<div id="posts">
+	</div>	
+
+
+<script src='/js/jquery.js'></script>
+
+<script>
+"use strict";
+$(document).ready(function() {
+	$.get('/data/blog.json').done(function(data) {
+		console.log('Everything went well');
+		console.log(data);
+		console.log(data[0].title);
+		data.forEach(function(data) {
+			$('#posts').append("<h4>" + data.title + "</h4>" + "<p id='content'>" + data.content + "</p>"+ "<p id ='categories'>" + data.categories + "</p>" + "<p id='date'>" + data.date + "</p>" + "<br>" + "</br>");
+		})
+	})
+	.fail(function() {
+		console.log('Houston we have a problem');
+	})
+	.always(function() {
+		console.log('We are all done');
+	});
+});
+
+</script>
+
+</body>
+</html>
