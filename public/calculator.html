@@ -130,8 +130,7 @@
     	$('.display').click(function() {
     		console.log(num1);
     		if (math !== '') {
-    			currentField = '#right';
-    			
+    			currentField = '#right';		
     		}
     	});
 
@@ -139,8 +138,7 @@
     		var a = parseFloat($('#left').val());
     		var b = parseFloat($('#right').val());
     		if (math == '+') {
-    			whole = a + b;
-    			
+    			whole = a + b;	
     		} else if (math == '-') {
     			whole = a - b;
     		} else if (math == '*') {
@@ -155,6 +153,7 @@
     		$('.numfield').val("");
     		currentField = '#left';
     		math = "";
+    		num1 = "";
     	});
     });
 
