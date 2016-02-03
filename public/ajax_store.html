@@ -36,9 +36,7 @@ $(document).ready(function() {
         data.forEach(function(data) {
             $('#insertProducts').append(
                 '<tr><td>' + data.title + '</td><td>' + data.quantity + '</td><td>' + data.price + '</td><td>' + data.categories + '</td></tr>');
-        });
-
-        
+        });       
         })
         .fail(function() {
         alert("There was an error!");
