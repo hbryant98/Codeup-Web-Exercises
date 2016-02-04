@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax Blog</title>
+    <meta charset="utf-8">
+
+    <!--CSS Reset -->
+	<link rel="cssstylereset" href="/css/normalize.css">
+	<!--Bootstrap -->
+	<link src="/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<div id="container">
+		<h3>Weather Forecast</h3>
+		<div id="weather">
+		</div>
+		<div id="map">
+		</div>	
+	</div>
+
+
+<script src='/js/jquery.js'></script>
+<script>
+"use strict";
+$(document).ready(function() {
+	$.get("http://api.openweathermap.org/data/2.5/weather?id=4726206", {
+		APPID: "dfef8444e655ec4532a2e0317acf46ec",
+		lat: 29.423017,
+		lon: -98.48527,
+		units: "imperial",
+		cnt: "3"
+	}).
+	fail(function(data) {
+		console.log('AJAX call failed');
+	})
+	.done(function(data) {
+		console.log(data);
+		displayWeather(data);
+	});
+	var displayWeather = function(data) {
+		console.log(data);
+		var icon = data.weather[0].icon
+		var city = "<p>" + data.name + "</p>";
+		var lowTemp = "<p>" + "Low: "+ data.main.temp_min + "</p>";
+		var highTemp = "<p>" + "High: " + data.main.temp_max + "</p>";
+		var image = '<p>' + "<img src = 'http://openweathermap.org/img/w/" + icon + ".png'>" + '</p>'
+		var humidity = "<p>" + "Humidity: " + data.main.humidity + "</p>";
+		var clouds = "<p>" + data.weather[0].description + "</p>";
+		var wind = "<p>" + "Winds: " + data.wind.speed + "</p>";
+		var pressure = "<p>" + "Pressure: " + data.main.pressure + "</p>"
+		var displayData = city + lowTemp + highTemp + image + humidity + clouds + wind + pressure;
+
+		$('#weather').append(displayData);
+	};
+	
+});
+
+</script>
+
+<!-- dfef8444e655ec4532a2e0317acf46ec -->
+
+<!-- var img = "<img src='"+data.avatar_url+"'>";
+		// var img = "<img src="someimage.jpg+"">";
+		// <img src=someimage.jpg>
+		$('#result').append(img); -->
