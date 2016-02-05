@@ -6,61 +6,132 @@
 
     <!--CSS Reset -->
 	<link rel="cssstylereset" href="/css/normalize.css">
-	<!--Bootstrap -->
-	<link src="/css/bootstrap.min.css" rel="stylesheet">
+<style>
+#container {
+	width: 900px;
+	margin: 0 auto;
+	background-color: #9EEAFA;
+	padding: 12px;
+}
+
+#weather {
+	height: 200px;
+	width: 700px;
+	background-color: white;
+	border: 1px solid black;
+	padding: 5px;
+
+}
+.weatherBox {
+	height: 150px;
+	width: 200px;
+	background-color: gray;
+	float: left;
+	border: 1px solid black;
+	font-size: 10px;
+	padding: 5px;
+}
+
+#mapCanvas {
+	width: 700px;
+	height: 400px;
+	background-color: green;
+	border: 1px solid black;
+	padding: 10px;
+}
+</style>
 
 </head>
 <body>
 	<div id="container">
 		<h3>Weather Forecast</h3>
+		<h4 id="city"></h4>
 		<div id="weather">
 		</div>
-		<div id="map">
+		<div id="mapCanvas">
 		</div>	
 	</div>
 
 
 <script src='/js/jquery.js'></script>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkU_jBS2bm7PZrDPgxifPgg7xXNTz5bec"></script>
 <script>
 "use strict";
 $(document).ready(function() {
-	$.get("http://api.openweathermap.org/data/2.5/weather?id=4726206", {
+	$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
 		APPID: "dfef8444e655ec4532a2e0317acf46ec",
-		lat: 29.423017,
-		lon: -98.48527,
+		q: "San Antonio, TX",
 		units: "imperial",
 		cnt: "3"
-	}).
-	fail(function(data) {
+	})
+	.fail(function(data) {
 		console.log('AJAX call failed');
 	})
 	.done(function(data) {
 		console.log(data);
-		displayWeather(data);
+		$('#city').html(data.city.name);
+		// displayWeather(data);
+		data.list.forEach(function(data) {
+			displayWeather(data)
+		})
 	});
 	var displayWeather = function(data) {
 		console.log(data);
-		var icon = data.weather[0].icon
-		var city = "<p>" + data.name + "</p>";
-		var lowTemp = "<p>" + "Low: "+ data.main.temp_min + "</p>";
-		var highTemp = "<p>" + "High: " + data.main.temp_max + "</p>";
-		var image = '<p>' + "<img src = 'http://openweathermap.org/img/w/" + icon + ".png'>" + '</p>'
-		var humidity = "<p>" + "Humidity: " + data.main.humidity + "</p>";
-		var clouds = "<p>" + data.weather[0].description + "</p>";
-		var wind = "<p>" + "Winds: " + data.wind.speed + "</p>";
-		var pressure = "<p>" + "Pressure: " + data.main.pressure + "</p>"
-		var displayData = city + lowTemp + highTemp + image + humidity + clouds + wind + pressure;
+		var icon = data.weather[0].icon	
+		var lowTemp = "Low: "+ data.temp.min;
+		var highTemp = "High: " + data.temp.max;
+		var image = "<img src = 'http://openweathermap.org/img/w/" + icon + ".png'>"; 
+		var humidity = "Humidity: " + data.humidity;
+		var clouds = data.weather[0].description;
+		var wind = "Winds: " + data.speed;
+		var pressure = "Pressure: " + data.pressure;
+		var displayData = "<div class='weatherBox'>" + lowTemp + highTemp + image + humidity + clouds + wind + pressure + "</div>";
 
 		$('#weather').append(displayData);
 	};
-	
-});
+
+
+	/*Google Map*/
+
+	var address = "6960 N Hwy 1A1, Jupiter, FL 33477";
+       var geocoder = new google.maps.Geocoder();
+       geocoder.geocode({ "address": address }, function(results, status) {
+         // Check for a successful result
+        if (status == google.maps.GeocoderStatus.OK) {
+                // Recenter the map over the address
+             console.log(results); /*will take out when done */  
+             map.setCenter(results[0].geometry.location);
+
+             var marker = new google.maps.Marker({
+                // "position": codeup,
+                "position": results[0].geometry.location,
+                "map": map,
+                "animation": google.maps.Animation.DROP
+             });
+         } else {
+            // Show an error message with the status if our request fails
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+        });
+        var mapOptions = {
+            zoom: 14,
+            center: {
+                lat:  226.942458,
+                lng: -80.080784
+            },
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("mapCanvas"), mapOptions);
+    });
+
+
+ 
+
+
+
 
 </script>
 
-<!-- dfef8444e655ec4532a2e0317acf46ec -->
-
-<!-- var img = "<img src='"+data.avatar_url+"'>";
-		// var img = "<img src="someimage.jpg+"">";
-		// <img src=someimage.jpg>
-		$('#result').append(img); -->
