@@ -134,10 +134,10 @@ $(document).ready(function() {
 		});	
 
 	var getWeather = function(data) {
-		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+		$.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat={latitude val}&lon={longitude value}", {
 			APPID: "dfef8444e655ec4532a2e0317acf46ec",
-			lat= myLat,
-			lon= myLon,
+			lat: myLat,
+			lon: myLon,
 			units: "imperial",
 			cnt: "3"
 		})
