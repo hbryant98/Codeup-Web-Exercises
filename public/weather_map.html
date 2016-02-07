@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ajax Blog</title>
+    <title>Weather Forecast</title>
     <meta charset="utf-8">
 
     <!--CSS Reset -->
@@ -15,9 +15,9 @@
 }
 
 #weather {
-	height: 200px;
+	height: 160px;
 	width: 700px;
-	background-color: white;
+	background-color: gray;
 	border: 1px solid black;
 	padding: 5px;
 
@@ -25,11 +25,31 @@
 .weatherBox {
 	height: 150px;
 	width: 200px;
-	background-color: gray;
+	background-color: white;
 	float: left;
 	border: 1px solid black;
 	font-size: 10px;
 	padding: 5px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.picture {
+	font-size: 8px;
+}
+
+button {
+	color: white;
+	background-color: blue;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+.coordinate {
+	border: 1px solid black;
+	background-color: white;
+	width: 100px;
+	height: 20px;
+	margin: 10px 5px 10px 5px;
 }
 
 #mapCanvas {
@@ -47,7 +67,15 @@
 		<h3>Weather Forecast</h3>
 		<h4 id="city"></h4>
 		<div id="weather">
+				
 		</div>
+		<div class="location">
+			<label for="latitude"></label>
+			<input type="text" name="latitude" class="coordinate" id="latitude" placeholder="Enter latitude coordinates">
+			<label for="longitude"></label>
+			<input type="text" name="longitude" class="coordinate" id="longitude" placeholder="Enter longitude coordinates">
+			<button>Submit</button>
+		</div>	
 		<div id="mapCanvas">
 		</div>	
 	</div>
@@ -55,10 +83,15 @@
 
 <script src='/js/jquery.js'></script>
 
-<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<!-- Load the Google Maps API  -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkU_jBS2bm7PZrDPgxifPgg7xXNTz5bec"></script>
 <script>
 "use strict";
+var myLat = "";
+var myLon = "";
+
+// <!-- OpenWeather api -->
+
 $(document).ready(function() {
 	$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
 		APPID: "dfef8444e655ec4532a2e0317acf46ec",
@@ -79,20 +112,49 @@ $(document).ready(function() {
 	});
 	var displayWeather = function(data) {
 		console.log(data);
-		var icon = data.weather[0].icon	
-		var lowTemp = "Low: "+ data.temp.min;
-		var highTemp = "High: " + data.temp.max;
-		var image = "<img src = 'http://openweathermap.org/img/w/" + icon + ".png'>"; 
-		var humidity = "Humidity: " + data.humidity;
-		var clouds = data.weather[0].description;
-		var wind = "Winds: " + data.speed;
-		var pressure = "Pressure: " + data.pressure;
-		var displayData = "<div class='weatherBox'>" + lowTemp + highTemp + image + humidity + clouds + wind + pressure + "</div>";
+		var icon = data.weather[0].icon;
+		var lowTemp = "<strong>" + data.temp.min + "&deg" + "</strong>";
+		var highTemp = "<strong>"  + data.temp.max + "&deg"  + "/" + "</strong>";
+		var image = "<img class='picture' src = 'http://openweathermap.org/img/w/" + icon + ".png'>"; 
+		var humidity = "<strong>" + "Humidity: " + "</strong>" + data.humidity;
+		var clouds = "<strong>" + "Clouds: " + "</strong>" + data.weather[0].description;
+		var wind = "<strong>" + "Winds: " + "</strong>" + data.speed;
+		var pressure = "<strong>" + "Pressure: " + "</strong>" + data.pressure;
+		var displayData = "<div class='weatherBox'>" + "<span>" + highTemp + lowTemp  + "</span>" + "<br>" + image + "</br>" + clouds + "<br>" + humidity + "&#37" + "</br>" + "<br>" + wind + "</br>" + pressure + "</div>";
 
 		$('#weather').append(displayData);
 	};
 
+	$('button').click(function(data) {
+			var myLat = $('#latitude').val();
+			var myLon = $('#longitude').val();
+			console.log(myLat);
+			console.log(myLon);
+			getWeather(data);
+		});	
 
+	var getWeather = function(data) {
+		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+			APPID: "dfef8444e655ec4532a2e0317acf46ec",
+			lat= myLat,
+			lon= myLon,
+			units: "imperial",
+			cnt: "3"
+		})
+		.fail(function(data) {
+		console.log('AJAX call failed');
+		})
+	.done(function(data) {
+		console.log(data);
+		console.log('made it to here')
+		// $('#city').html(data.city.name);
+		data.list.forEach(function(data) {
+			displayWeather(data)
+		})
+	});
+	// 	displayWeather(data);
+	// }
+	};	
 	/*Google Map*/
 
 	var address = "6960 N Hwy 1A1, Jupiter, FL 33477";
@@ -128,10 +190,6 @@ $(document).ready(function() {
     });
 
 
- 
-
-
-
-
 </script>
-
+</body>
+</html>
