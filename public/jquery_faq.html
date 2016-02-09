@@ -88,17 +88,25 @@
 
     	$('#answers').click(function(event) {
     		event.preventDefault();
-    		$('dd').toggleClass('invisible');
+    		// $('dd').toggleClass('invisible');
+            // $('dd').toggle();
+            $('dd').slideToggle();
     	});
 
     	$('ul').each(function() {
     		 $(this).children().first().css('font-weight', 'bold');	
     		});
 
-    	$('li').click(function() {
-    		$(this).parent().addClass('invisible');
-    	});	
-    		
+    	// $('li').click(function() {
+    	// 	// $(this).parent().addClass('invisible');
+     //        // $(this).parent().hide();
+    	// });	
+        // $('h3').click(function() {
+        //     $('ul').slideToggle();
+        // });
+    	$('h3').click(function() {
+            $(this).children().slideToggle();
+        })	
     });
 
 
