@@ -126,15 +126,15 @@ $(document).ready(function() {
 	};
 
 	$('button').click(function(data) {
-			var myLat = $('#latitude').val();
-			var myLon = $('#longitude').val();
+			myLat = $('#latitude').val();
+		 	myLon = $('#longitude').val();
 			console.log(myLat);
 			console.log(myLon);
 			getWeather(data);
 		});	
 
 	var getWeather = function(data) {
-		$.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat={latitude val}&lon={longitude value}", {
+		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
 			APPID: "dfef8444e655ec4532a2e0317acf46ec",
 			lat: myLat,
 			lon: myLon,
@@ -144,16 +144,14 @@ $(document).ready(function() {
 		.fail(function(data) {
 		console.log('AJAX call failed');
 		})
-	.done(function(data) {
+		.done(function(data) {
 		console.log(data);
 		console.log('made it to here')
-		// $('#city').html(data.city.name);
+		$('#city').html(data.city.name);
 		data.list.forEach(function(data) {
 			displayWeather(data)
 		})
 	});
-	// 	displayWeather(data);
-	// }
 	};	
 	/*Google Map*/
 
