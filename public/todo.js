@@ -53,10 +53,9 @@ console.log("document loaded");
 			"due_date": date
 		};
 		$.post("todo-json.php", data, function(items) {		//enter diff address here
-			console.log(items);
-			$('#content').empty();
-			$('#priority').empty();
-			$('#due_date').empty(); //these are not working
+			$('#content').val('');
+			$('#priority').val('');
+			$('#due_date').val('');
 		});
 
 	});
