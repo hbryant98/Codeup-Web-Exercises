@@ -2,16 +2,27 @@
 <head>
 	<title>To Do App</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/locale/af.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.11.2/moment.min.js"></script>
 </head>
 <style>
 
-	h1, th, td {
+	h3 {
+		color: gray;
+	}
+
+	th, td {
 		text-align: center;
 	}
 
 	tr {
 		background-color: #ADD8E6;
+	}
+
+	.listSort {
+		text-align: center;
+	}
+	td>button {
+		border-radius: 25px;
 	}
 
 </style>
@@ -20,7 +31,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1>This is a todo list</h1>
+				<h3>This is my husband's todo list!</h3>
 			</div>
 		</div>
 		<div class="row">
@@ -29,8 +40,8 @@
 					<input type="text" id="content" placeholder="Item"></input>
 					<input type="text" id="priority" placeholder="Priority: 1,2,3"></input>
 					<input type="date" id="due_date" placeholder="Date"></input>
-					<button type="button" class="btn btn-info" id="btn-new-item">New</button>
-					<button type="button" class="btn btn-warning" id="btn-show-items">Show</button>
+					<button type="button" class="btn btn-info" id="btn-new-item">Add New Item</button>
+					<button type="button" class="btn btn-warning" id="btn-show-items">Show All Items</button>
 				</form>
 			</div>
 		</div>
@@ -45,9 +56,19 @@
         				</tr>
     				</thead>
     				<tbody id="thingsToDo">
-   					 </tbody>
-					</table>
+   					</tbody>
+				</table>
 			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="listSort">	
+						<button type="button" class="btn btn-default btn-xs" id="btn-sort-by-priority">Sort by Priority</button>
+						<button type="button" class="btn btn-default btn-xs" id="btn-sort-by-due_date">Sort by Due Date</button>
+						<button type="button" class="btn btn-default btn-xs" id="btn-sort-by-content">Sort by Content</button>
+						<button type="button" class="btn btn-default btn-xs" id="btn-sort-by-complete">Sort by Complete</button>
+					</div>
+				</div>
+			</div>		
 		</div>	
 
 	</div>
