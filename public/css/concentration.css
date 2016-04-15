@@ -20,7 +20,7 @@
 }
 
 #memory_board > div {
-	background: url (tile_bg.jpg) no-repeat;
+	background: url (/img/tile_bg.jpg) no-repeat;
 	border: 1px #000 solid;
 	width: 71px;
 	height: 71px;

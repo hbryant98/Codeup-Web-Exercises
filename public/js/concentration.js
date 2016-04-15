@@ -24,7 +24,42 @@ function newBoard() {
 	}
 	document.getElementById('memory_board').innerHTML = output;	
 }
-// window.addEventListener(newBoard());
+
+function memoryFlipTile(tile, val) {
+	if (tile.innerHTML == "" && memoryValues.length < 2) {
+		tile.style.background = '#FFF';
+		tile.innerHTML = val;
+		if (memoryValues.length == 0) {
+			memoryValues.push(val);
+			memoryTileIds.push(tile.id);
+		} else if (memoryValues.length == 1) {
+			memoryValues.push(val);
+			memoryTileIds.push(tile.id);
+		} if (memoryValues[0] == memoryValues[1]) {
+			tilesFlipped +=2;
+			memoryValues = [];
+			memoryTileIds = [];
+			if (tilesFlipped == memoryArray.length) {
+				alert("You Win! It's time for a new game!");
+				document.getElementById('memory_board').innerHTML = "";
+				newBoard();
+			}
+		} else {
+			function flipToBack() {
+				var tile_1 = document.getElementById(memoryTileIds[0]);
+				var tile_2 = document.getElementById(memoryTileIds[1]);
+				tile_1.background = 'url (/img/tile_bg.jpg) no-repeat';
+				tile_1.innerHTML = "";
+				tile_2.background = 'url (/img/tile_bg.jpg) no-repeat';
+				tile_2.innerHTML = "";
+				memoryValues = [];
+				memoryTileIds = [];
+			}
+			setTimeout(flipToBack, 600);
+		}
+
+	}
+}
 $(document).ready(function() {
 	console.log("document loaded");
 	newBoard();
