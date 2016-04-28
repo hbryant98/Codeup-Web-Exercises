@@ -48,14 +48,14 @@ function memoryFlipTile(tile, val) {
 			function flipToBack() {
 				var tile_1 = document.getElementById(memoryTileIds[0]);
 				var tile_2 = document.getElementById(memoryTileIds[1]);
-				tile_1.background = 'url (/img/tile_bg.jpg) no-repeat';
+				tile_1.style.background = "url('/img/capesanblas.jpeg') no-repeat";
 				tile_1.innerHTML = "";
-				tile_2.background = 'url (/img/tile_bg.jpg) no-repeat';
+				tile_2.style.background = "url('/img/capesanblas.jpeg') no-repeat";
 				tile_2.innerHTML = "";
 				memoryValues = [];
 				memoryTileIds = [];
 			}
-			setTimeout(flipToBack, 600);
+			setTimeout(flipToBack, 2000);
 		}
 
 	}

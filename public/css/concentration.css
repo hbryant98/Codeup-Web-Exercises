@@ -4,8 +4,7 @@
 *SETTINGS
 *Global............Global styles and config
 *
-*Input Fields.......styles for text input data fields
-*Buttons.........styles for calculator buttons
+*Deck of Cards.......styles for each card
 
 **/
 
@@ -19,8 +18,11 @@
 	margin: 0px auto;
 }
 
+/*------------------- Deck of Cards -----------------------*/
+
 #memory_board > div {
-	background: url (/img/tile_bg.jpg) no-repeat;
+	background-image: url("/img/capesanblas.jpeg");
+	background-image: no-repeat;
 	border: 1px #000 solid;
 	width: 71px;
 	height: 71px;
